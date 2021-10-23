@@ -7,7 +7,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2
       - name: test
-        run: echo "this has been triggered ${{ GITHUB_EVENT_NAME }} event "
+        run: echo "${{github.workspace}}"
       - name: build docker image
         run: |
           docker build . 
