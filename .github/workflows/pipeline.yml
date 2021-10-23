@@ -1,1 +1,11 @@
-
+name: first-pipeline
+on: push
+jobs:
+  build-code:
+    runs-on: ubuntu-latest
+    permissions: read-all|write-all
+    steps:
+    - name: build docker image
+    uses: actions/checkout@v2
+    run: |
+      docker build 
