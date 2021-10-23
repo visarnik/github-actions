@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions: read-all|write-all
     steps:
-      - name: build docker image
+      - name: checkout repo
         uses: actions/checkout@v2
+      - name: build docker image
         run: |
-          docker build 
+          docker build    
