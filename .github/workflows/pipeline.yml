@@ -6,6 +6,6 @@ jobs:
     permissions: read-all|write-all
     steps:
     - name: build docker image
-    uses: actions/checkout@v2
-    run: |
-      docker build 
+      uses: actions/checkout@v2
+      run: |
+        docker build 
