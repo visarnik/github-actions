@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
+      - name: test
+        run: echo "${{GITHUB_WORKSPACE}}"
       - name: build docker image
         run: |
           docker build . 
