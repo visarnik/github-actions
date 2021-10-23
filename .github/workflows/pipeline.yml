@@ -19,4 +19,7 @@ jobs:
         run: mvn clean package
       - name: build docker image
         run: |
-          docker build . 
+          docker build -t my-image:latest .
+      - name: run docker container
+        run: |
+          docker run -d --name pipeline -it --rm -p 8888:8080 my-image:latest
