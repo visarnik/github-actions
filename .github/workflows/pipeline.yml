@@ -3,8 +3,6 @@ on: push
 jobs:
   build-code:
     runs-on: ubuntu-latest
-    permissions: 
-      read-all|write-all
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
