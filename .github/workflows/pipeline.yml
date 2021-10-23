@@ -7,7 +7,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2
       - name: test
-        run: echo "${{github.workspace}}"
+        run: echo github.workspace
       - name: build docker image
         run: |
           docker build . 
